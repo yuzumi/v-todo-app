@@ -1,7 +1,6 @@
-<template>
-  <div class="app" id="app">
-    <Template />
-  </div>
+<template lang="pug">
+  div(class="app" id="app")
+    Template
 </template>
 
 <style>

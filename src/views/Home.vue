@@ -1,7 +1,6 @@
-<template>
-  <div class="col">
-    <TodoList />
-  </div>
+<template lang="pug">
+  div(class="col")
+    TodoList
 </template>
 
 <script>

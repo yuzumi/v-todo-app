@@ -1,17 +1,15 @@
-<template>
-  <div class="app-wrapper">
-    <header class="header">
-      <Navbar />
-    </header>
-    <main class="main">
-      <div class="container pt-5">
-        <div class="row">
-          <router-view />
-        </div>
-      </div>
-    </main>
-    <footer class="footer"></footer>
-  </div>
+<template lang="pug">
+  div(class="app-wrapper")
+    //- Header
+    header(class="header")
+      Navbar
+    //- Main
+    main(class="main")
+      div(class="container pt-5")
+        div(class="row")
+          router-view
+    //- Footer
+    footer(class="footer")
 </template>
 
 <script>
