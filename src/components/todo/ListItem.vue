@@ -11,18 +11,20 @@
         p(class="card-text text-muted")
           | {{createdAt}}
     div(class="card-footer")
-      button(class="btn btn-danger btn-sm mr-0" type="button" @click="$emit('remove')")
-        i(class="fas fa-trash mr-0") 
+      Button(class="mr-0" modificators="danger sm" type="button" @click="$emit('remove')")
+        Icon(class="mr-0" type="fas" name="trash")
         span(class="pl-2")
           | Remove
       router-link(class="btn btn-success btn-sm" :to="to")
-        i(class="fas fa-edit mr-0") 
+        Icon(class="mr-0" type="fas" name="edit")
         span(class="pl-2")
           | Edit
 </template>
 
 <script>
 import { format } from "date-fns";
+import Icon from "@/components/shared/Icon";
+import Button from "@/components/shared/Button";
 
 export default {
   name: "todo-list-item",
@@ -41,6 +43,10 @@ export default {
     to() {
       return `/edit/${this.todo.id}`;
     }
+  },
+  components: {
+    Icon,
+    Button
   }
 };
 </script>

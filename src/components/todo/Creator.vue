@@ -5,17 +5,14 @@
 <script>
 import { mapMutations } from "vuex";
 import Todo from "@/models/Todo";
-import TodoForm from "@/components/TodoForm";
+import TodoForm from "@/components/todo/Form";
+import getDefaultTodoState from "@/utils/getDefaultTodoState";
 
 export default {
   name: "todo-creator",
   data() {
     return {
-      todo: {
-        title: "",
-        descrption: "",
-        done: false
-      }
+      todo: { ...getDefaultTodoState() }
     };
   },
   methods: {
