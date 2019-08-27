@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import TodoEditor from "@/components/TodoEditor";
+import TodoEditor from "@/components/todo/Editor";
 
 export default {
   name: "edit",

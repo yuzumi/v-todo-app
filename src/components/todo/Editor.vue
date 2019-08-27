@@ -4,7 +4,7 @@
 
 <script>
 import { mapGetters, mapMutations } from "vuex";
-import TodoForm from "@/components/TodoForm";
+import TodoForm from "@/components/todo/Form";
 
 export default {
   name: "todo-editor",

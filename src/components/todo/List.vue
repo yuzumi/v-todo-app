@@ -12,7 +12,7 @@
 
 <script>
 import { mapState, mapMutations } from "vuex";
-import TodoListItem from "@/components/TodoListItem";
+import TodoListItem from "@/components/todo/ListItem";
 
 export default {
   name: "todo-list",

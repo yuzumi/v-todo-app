@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import TodoCreator from "@/components/TodoCreator";
+import TodoCreator from "@/components/todo/Creator";
 
 export default {
   name: "new",
