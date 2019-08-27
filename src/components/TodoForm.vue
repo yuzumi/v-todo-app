@@ -16,17 +16,15 @@
 </template>
 
 <script>
+import getDefaultTodoState from "@/utils/getDefaultTodoState";
+
 export default {
   name: "todo-form",
   props: {
     todo: {
       type: Object,
       default() {
-        return {
-          title: "",
-          description: "",
-          done: false
-        };
+        return { ...getDefaultTodoState() };
       }
     }
   }
