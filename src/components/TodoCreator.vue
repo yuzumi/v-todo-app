@@ -1,5 +1,5 @@
-<template>
-  <TodoForm :todo="todo" @submit="onSubmit" />
+<template lang="pug">
+  TodoForm(:todo="todo" @submit="onSubmit")
 </template>
 
 <script>
