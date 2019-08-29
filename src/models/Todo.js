@@ -8,4 +8,12 @@ export default class Todo {
     this.done = done;
     this.createdAt = now;
   }
+
+  static get defaultState() {
+    return {
+      title: "",
+      description: "",
+      done: false
+    };
+  }
 }
