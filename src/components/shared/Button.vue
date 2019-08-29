@@ -5,13 +5,11 @@
 
 <script>
 export default {
-  name: "button",
+  name: "btn",
   props: {
     modificators: {
-      type: Array,
-      default() {
-        return [];
-      }
+      type: String,
+      default: ""
     }
   },
   computed: {
