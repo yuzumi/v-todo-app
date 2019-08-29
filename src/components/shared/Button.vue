@@ -8,10 +8,8 @@ export default {
   name: "button",
   props: {
     modificators: {
-      type: Array,
-      default() {
-        return [];
-      }
+      type: String,
+      default: ""
     }
   },
   computed: {
