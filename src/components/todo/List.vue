@@ -5,9 +5,9 @@
         TodoListItem(:todo="todo" @remove="removeTodo(todo)")
     div(v-else)
       div(class="alert alert-info text-center" role="alert")
-        | No todos...
+        | {{$t("todo.no")}}
       router-link(class="btn btn-primary btn-sm" to="/new")
-        | Add todo
+        | {{$t("todo.add")}}
 </template>
 
 <script>

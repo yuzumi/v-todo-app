@@ -6,19 +6,19 @@
       form(class="form mb-0" @submit.prevent="$emit('submit')")
         //- Form Group
         div(class="form-group")
-          input(class="form-control" type="text" v-model="todo.title" placeholder="Title" required)
+          input(class="form-control" type="text" v-model="todo.title" :placeholder="$t('title')" required)
         //- Form Group
         div(class="form-group")
-          textarea(class="form-control" v-model="todo.description" placeholder="Description" style="resize: none;")
+          textarea(class="form-control" v-model="todo.description" :placeholder="$t('description')" style="resize: none;")
         //- Form Group
         div(class="form-group")
           div(class="form-check")
             input(class="form-check-input" type="checkbox" id="done" v-model="todo.done")
-            label(class="form-check-label" for="done")
-              | Done
+            label(class="form-check-label" for="done") 
+              | {{$t('done')}}
         //- Submit Button
         Button(modificators="outline-primary sm block" type="submit")
-          | Add
+          | {{$t('add')}}
 </template>
 
 <script>

@@ -12,7 +12,7 @@
       //- Date
       div(class="d-flex align-items-center justify-content-between")
         p(class="card-text mb-0")
-          | {{todo.done ? 'Done' : 'Work in process'}}
+          | {{todo.done ? $t("todo.done") : $t("todo.wip")}}
         p(class="card-text text-muted")
           | {{createdAt}}
     div(class="card-footer")
@@ -20,12 +20,12 @@
       Button(class="mr-0" modificators="danger sm" type="button" @click="$emit('remove')")
         Icon(class="mr-0" type="fas" name="trash")
         span(class="pl-2")
-          | Remove
+          | {{$t("remove")}}
       //- Edit
       router-link(class="btn btn-success btn-sm" :to="to")
         Icon(class="mr-0" type="fas" name="edit")
         span(class="pl-2")
-          | Edit
+          | {{$t("edit")}}
 </template>
 
 <script>
