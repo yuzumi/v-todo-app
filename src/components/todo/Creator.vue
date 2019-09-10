@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { namespacedHelpers } from "@/store/modules/todos";
 import Todo from "@/models/Todo";
 import TodoForm from "@/components/todo/Form";
 
@@ -15,7 +15,7 @@ export default {
     };
   },
   methods: {
-    ...mapMutations("todos", ["addTodo"]),
+    ...namespacedHelpers.mapMutations(["addTodo"]),
     onSubmit() {
       this.addTodo(new Todo(this.todo));
 

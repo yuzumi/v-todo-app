@@ -8,3 +8,5 @@ export default {
   getters,
   mutations
 };
+
+export { default as namespacedHelpers } from "@/store/modules/todos/helpers";

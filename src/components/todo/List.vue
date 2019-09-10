@@ -11,16 +11,16 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from "vuex";
+import { namespacedHelpers } from "@/store/modules/todos";
 import TodoListItem from "@/components/todo/ListItem";
 
 export default {
   name: "todo-list",
   computed: {
-    ...mapState("todos", ["todos"])
+    ...namespacedHelpers.mapState(["todos"])
   },
   methods: {
-    ...mapMutations("todos", ["removeTodo"])
+    ...namespacedHelpers.mapMutations(["removeTodo"])
   },
   components: {
     TodoListItem

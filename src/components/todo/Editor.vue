@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from "vuex";
+import { namespacedHelpers } from "@/store/modules/todos";
 import TodoForm from "@/components/todo/Form";
 
 export default {
@@ -15,13 +15,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters("todos", ["getTodoById"]),
+    ...namespacedHelpers.mapGetters(["getTodoById"]),
     todo() {
       return this.getTodoById(this.todoId);
     }
   },
   methods: {
-    ...mapMutations("todos", ["editTodo"]),
+    ...namespacedHelpers.mapMutations(["editTodo"]),
     onEdit() {
       this.editTodo(this.todo);
 
