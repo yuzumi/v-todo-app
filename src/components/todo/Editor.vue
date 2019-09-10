@@ -15,13 +15,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["getTodoById"]),
+    ...mapGetters("todos", ["getTodoById"]),
     todo() {
       return this.getTodoById(this.todoId);
     }
   },
   methods: {
-    ...mapMutations(["editTodo"]),
+    ...mapMutations("todos", ["editTodo"]),
     onEdit() {
       this.editTodo(this.todo);
 

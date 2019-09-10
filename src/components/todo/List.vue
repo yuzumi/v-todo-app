@@ -17,10 +17,10 @@ import TodoListItem from "@/components/todo/ListItem";
 export default {
   name: "todo-list",
   computed: {
-    ...mapState(["todos"])
+    ...mapState("todos", ["todos"])
   },
   methods: {
-    ...mapMutations(["removeTodo"])
+    ...mapMutations("todos", ["removeTodo"])
   },
   components: {
     TodoListItem

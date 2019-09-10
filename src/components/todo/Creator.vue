@@ -15,7 +15,7 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(["addTodo"]),
+    ...mapMutations("todos", ["addTodo"]),
     onSubmit() {
       this.addTodo(new Todo(this.todo));
 
