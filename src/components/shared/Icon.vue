@@ -8,7 +8,7 @@ export default {
   props: {
     type: {
       type: String,
-      required: true
+      default: "fas"
     },
     name: {
       type: String,
