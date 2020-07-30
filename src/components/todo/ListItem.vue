@@ -1,6 +1,6 @@
 <template lang="pug">
   //- Card
-  div(class="card" style="flex: 1 1;")
+  div(class="card")
     div(class="card-body mr-0")
       //- Title
       h5(class="card-title")
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { format } from "date-fns";
+import format from "date-fns/format";
 import Icon from "@/components/shared/Icon";
 import Button from "@/components/shared/Button";
 
@@ -57,3 +57,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.card {
+  flex: 1 1;
+}
+</style>
