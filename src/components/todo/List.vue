@@ -2,7 +2,7 @@
   div(class="todo-list")
     ul(class="list-group" v-if="hasTodos")
       li(class="list-group-item" v-for="todo in todos" :key="todo.id")
-        TodoListItem(:todo="todo" @remove="removeTodo(todo)")
+        todo-list-item(:todo="todo" @remove="removeTodo(todo)")
     div(v-else)
       div(class="alert alert-info text-center" role="alert")
         | {{$t("todo.no")}}

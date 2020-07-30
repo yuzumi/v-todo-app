@@ -17,13 +17,13 @@
             label(class="form-check-label" for="done") 
               | {{$t('done')}}
         //- Submit Button
-        Button(modificators="outline-primary sm block" type="submit")
+        btn(modificators="outline-primary sm block" type="submit")
           | {{$t('add')}}
 </template>
 
 <script>
 import Todo from "@/models/Todo";
-import Button from "@/components/shared/Button";
+import Btn from "@/components/shared/Btn";
 
 export default {
   name: "todo-form",
@@ -36,7 +36,7 @@ export default {
     }
   },
   components: {
-    Button
+    Btn
   }
 };
 </script>

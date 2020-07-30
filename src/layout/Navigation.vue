@@ -6,14 +6,14 @@
       :key="to"
       :to="to"
     )
-      Icon(:name="icon")
+      icon(:name="icon")
 </template>
 
 <script>
 import Icon from "@/components/shared/Icon";
 
 export default {
-  name: "app-nav",
+  name: "navigation",
   data() {
     return {
       links: [

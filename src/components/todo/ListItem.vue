@@ -17,13 +17,13 @@
           | {{createdAt}}
     div(class="card-footer")
       //- Remove
-      Button(class="mr-0" modificators="danger sm" type="button" @click="$emit('remove')")
-        Icon(class="mr-0" type="fas" name="trash")
+      btn(class="mr-0" modificators="danger sm" type="button" @click="$emit('remove')")
+        icon(class="mr-0" type="fas" name="trash")
         span(class="pl-2")
           | {{$t("remove")}}
       //- Edit
       router-link(class="btn btn-success btn-sm" :to="to")
-        Icon(class="mr-0" type="fas" name="edit")
+        icon(class="mr-0" type="fas" name="edit")
         span(class="pl-2")
           | {{$t("edit")}}
 </template>
@@ -31,7 +31,7 @@
 <script>
 import format from "date-fns/format";
 import Icon from "@/components/shared/Icon";
-import Button from "@/components/shared/Button";
+import Btn from "@/components/shared/Btn";
 
 export default {
   name: "todo-list-item",
@@ -53,7 +53,7 @@ export default {
   },
   components: {
     Icon,
-    Button
+    Btn
   }
 };
 </script>
