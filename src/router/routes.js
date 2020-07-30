@@ -7,11 +7,11 @@ export default [
   {
     path: "/new",
     name: "new",
-    component: () => import("@/views/New.vue")
+    component: () => import("@/views/NewTodo.vue")
   },
   {
     path: "/edit/:id",
     name: "edit",
-    component: () => import("@/views/Edit.vue")
+    component: () => import("@/views/EditTodo.vue")
   }
 ];

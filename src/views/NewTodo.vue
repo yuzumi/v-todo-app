@@ -7,7 +7,7 @@
 import TodoCreator from "@/components/todo/Creator";
 
 export default {
-  name: "new",
+  name: "new-todo",
   components: {
     TodoCreator
   }

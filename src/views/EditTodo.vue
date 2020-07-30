@@ -7,7 +7,7 @@
 import TodoEditor from "@/components/todo/Editor";
 
 export default {
-  name: "edit",
+  name: "edit-todo",
   computed: {
     id() {
       return this.$route.params.id;
