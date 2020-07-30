@@ -31,7 +31,7 @@ export default {
     todo: {
       type: Object,
       default() {
-        return { ...Todo.defaultState };
+        return Todo.getDefaultState();
       }
     }
   },

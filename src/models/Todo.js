@@ -9,7 +9,7 @@ export default class Todo {
     this.createdAt = now;
   }
 
-  static get defaultState() {
+  static getDefaultState() {
     return {
       title: "",
       description: "",

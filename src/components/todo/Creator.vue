@@ -11,7 +11,7 @@ export default {
   name: "todo-creator",
   data() {
     return {
-      todo: { ...Todo.defaulState }
+      todo: Todo.getDefaultState()
     };
   },
   methods: {
