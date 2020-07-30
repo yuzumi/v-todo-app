@@ -1,6 +1,6 @@
 <template lang="pug">
   div(class="todo-list")
-    ul(class="list-group" v-if="todos.length")
+    ul(class="list-group" v-if="hasTodos")
       li(class="list-group-item" v-for="todo in todos" :key="todo.id")
         TodoListItem(:todo="todo" @remove="removeTodo(todo)")
     div(v-else)
@@ -11,16 +11,17 @@
 </template>
 
 <script>
-import { namespacedHelpers } from "@/store/modules/todos";
+import { todosModule } from "@/store/modules/todos";
 import TodoListItem from "@/components/todo/ListItem";
 
 export default {
   name: "todo-list",
   computed: {
-    ...namespacedHelpers.mapState(["todos"])
+    ...todosModule.mapState(["todos"]),
+    ...todosModule.mapGetters(["hasTodos"])
   },
   methods: {
-    ...namespacedHelpers.mapMutations(["removeTodo"])
+    ...todosModule.mapMutations(["removeTodo"])
   },
   components: {
     TodoListItem

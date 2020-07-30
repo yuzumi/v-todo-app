@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { namespacedHelpers } from "@/store/modules/todos";
+import { todosModule } from "@/store/modules/todos";
 import TodoForm from "@/components/todo/Form";
 
 export default {
@@ -15,13 +15,13 @@ export default {
     }
   },
   computed: {
-    ...namespacedHelpers.mapGetters(["getTodoById"]),
+    ...todosModule.mapGetters(["getTodoById"]),
     todo() {
       return this.getTodoById(this.todoId);
     }
   },
   methods: {
-    ...namespacedHelpers.mapMutations(["editTodo"]),
+    ...todosModule.mapMutations(["editTodo"]),
     onEdit() {
       this.editTodo(this.todo);
 
