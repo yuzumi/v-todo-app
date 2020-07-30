@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueI18n from "vue-i18n";
-import messages from "@/internationalization/messages";
-import { defaultLocale } from "../internationalization/config";
+import messages from "@/i18n/messages";
+import { defaultLocale } from "@/i18n/config";
 
 Vue.use(VueI18n);
 

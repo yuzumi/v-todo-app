@@ -3,18 +3,16 @@
     div(class="form-group mb-0")
       select(class="form-control" v-model="$i18n.locale")
         option(v-for="locale in locales" :key="locale" :value="locale")
-          | {{locale}}
+          | {{ locale }}
 </template>
 
 <script>
-import { locales } from "@/internationalization/config";
+import { locales } from "@/i18n/config";
 
 export default {
   name: "locale-changer",
-  computed: {
-    locales() {
-      return locales;
-    }
-  }
+  data: () => ({
+    locales
+  })
 };
 </script>

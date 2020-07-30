@@ -11,7 +11,7 @@
 <script>
 import Nav from "@/layout/Nav";
 import Icon from "@/components/shared/Icon";
-import LocaleChanger from "@/internationalization/LocaleChanger";
+import LocaleChanger from "@/i18n/LocaleChanger";
 
 export default {
   name: "app-navbar",
